@@ -1,0 +1,260 @@
+//* Container
+$max-width-container: 1366px !default;
+$min-width-container: 290px !default;
+
+//* Colors
+$color-first: #333 !default;
+$color-first--55: #3333338c !default;
+$color-second: #ff6b6b !default;
+$color-second--dark: #ff5050 !default;
+$color-third: #6c6c6c !default;
+$color-fourty: #27ae60 !default;
+$color-fourty--dark: #219653 !default;
+$color-border: #e6e6e6 !default;
+$color-bg: #f2f2f2 !default;
+
+//* Fonts
+$font-family-first: "Muli", sans-serif !global;
+$font-family-regular-first: 400 !global;
+$font-family-bold-first: 700 !global;
+$font-family-black-first: 900 !global;
+
+//* Placeholders
+%href-link {
+    color: $color-first;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:focus,
+    &:hover {
+        color: $color-second;
+        text-decoration: none;
+    }
+
+    &:focus,
+    &:visited,
+    &:active {
+        outline: none;
+    }
+}
+
+%button {
+    border: none;
+    border-radius: 0;
+    font-family: $font-family-first;
+    font-size: 18px;
+    font-weight: $font-family-bold-first;
+    text-align: center;
+    line-height: normal;
+    cursor: pointer;
+
+    &:focus,
+    &:visited,
+    &:active {
+        outline: none;
+    }
+}
+
+%button-reset {
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    background: transparent;
+
+    &:focus {
+        background: none;
+        outline: none;
+    }
+}
+
+%button-color {
+    @extend %button;
+    background: $color-first;
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        background: $color-second;
+        color: #ffffff;
+    }
+}
+
+%button-cta {
+    @extend %button-color;
+}
+
+%button-normal {
+    @extend %button;
+    background: transparent;
+    color: #ababab;
+
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        background: #e0e0e0;
+        color: #333333;
+    }
+}
+
+%button-cta {
+    @extend %button;
+    border-radius: 5px;
+    background-color: $color-fourty;
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        background: $color-fourty--dark;
+    }
+}
+
+%is-hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+//* Mixins
+@mixin font-smoothing($aliasing: antialiased) {
+    @if $aliasing == antialiased {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    } @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+@mixin is-hidden() {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+@mixin is-invisible() {
+    visibility: hidden;
+}
+
+//? Dimensions
+@mixin width-percent($container, $width, $important: false) {
+    @if $important==false {
+        width: (($width * 100) / $container) * 1%;
+    } @else {
+        width: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin margin-percent($container, $width-top, $width-right, $width-bottom, $width-left, $important: false) {
+    @if $important==false {
+        margin: ((($width-top * 100) / $container) * 1%)
+            ((($width-right * 100) / $container) * 1%)
+            ((($width-bottom * 100) / $container) * 1%)
+            ((($width-left * 100) / $container) * 1%);
+    } @else {
+        margin: ((($width-top * 100) / $container) * 1%)
+            ((($width-right * 100) / $container) * 1%)
+            ((($width-bottom * 100) / $container) * 1%)
+            ((($width-left * 100) / $container) * 1%) !important;
+    }
+}
+
+@mixin margin-right-percent($container, $width, $important: false) {
+    @if $important==false {
+        margin-right: (($width * 100) / $container) * 1%;
+    } @else {
+        margin-right: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin margin-left-percent($container, $width, $important: false) {
+    @if $important==false {
+        margin-left: (($width * 100) / $container) * 1%;
+    } @else {
+        margin-left: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin padding-right-percent($container, $width, $important: false) {
+    @if $important==false {
+        padding-right: (($width * 100) / $container) * 1%;
+    } @else {
+        padding-right: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin padding-left-percent($container, $width, $important: false) {
+    @if $important==false {
+        padding-left: (($width * 100) / $container) * 1%;
+    } @else {
+        padding-left: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin padding-bottom-percent($container, $width, $important: false) {
+    @if $important==false {
+        padding-bottom: (($width * 100) / $container) * 1%;
+    } @else {
+        padding-bottom: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin padding-percent($container, $width, $important: false) {
+    @if $important==false {
+        padding: (($width * 100) / $container) * 1%;
+    } @else {
+        padding: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin position-right-percent($container, $width, $important: false) {
+    @if $important==false {
+        right: (($width * 100) / $container) * 1%;
+    } @else {
+        right: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin position-left-percent($container, $width, $important: false) {
+    @if $important==false {
+        left: (($width * 100) / $container) * 1%;
+    } @else {
+        left: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+//* Functions
+@function z-index($key1, $key2: null) {
+    $map: $z-indexes;
+    $found-index: null;
+    @if (map-has-key($map, $key1)) {
+        $found-index: index(map-keys($map), $key1);
+        @if ($key2) {
+            $map: map-get($map, $key1);
+            $found-index: index($map, $key2);
+        }
+    }
+    @return $found-index;
+}
+@function z($key1, $key2: null) {
+    @return z-index($key1, $key2);
+}
+
+$z-indexes: (
+    main: (
+        mainBannerNav,
+        headerFixed,
+        counterBanners
+    ),
+    modal: (),
+    header: (
+        topbar,
+        userInfo,
+        salesforce,
+        sidenav,
+        itemMenu
+    )
+);

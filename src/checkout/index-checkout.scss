@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@import "~stylesheets/_reset.scss";
+
+#ajaxBusy,
+.is-hidden {
+    @include is-hidden();
+}
+
+html {
+    box-sizing: border-box;
+
+    * {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    background: #fff;
+    font-family: $font-family-first;
+    font-size: 62.5%;
+    color: $color-first;
+    @include font-smoothing();
+
+    &:before {
+        content: "";
+        transition: all 0.3s ease-out;
+        opacity: 0;
+    }
+
+    > object {
+        position: absolute !important;
+        bottom: -100% !important;
+        left: -100% !important;
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        visibility: hidden !important;
+        &:hover,
+        &:focus,
+        &:active,
+        &:visited {
+            outline: none;
+        }
+    }
+
+    &:not([class*="-com-br"]) {
+        background: transparent;
+    }
+}
+
+.container {
+    position: relative;
+    max-width: $max-width-container;
+    min-width: $min-width-container;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 24px;
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        line-height: 0;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 0 16px;
+    }
+}
+
+a {
+    @extend %href-link;
+}
+
+button {
+    &:focus,
+    &:visited,
+    &:active {
+        outline: none;
+    }
+}
+
+label {
+    display: initial;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+        outline: none;
+    }
+}
+
+input,
+button,
+select {
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        outline: none !important;
+    }
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        outline: none !important;
+    }
+
+    li {
+        &:hover,
+        &:focus,
+        &:visited,
+        &:active {
+            outline: none !important;
+        }
+    }
+}

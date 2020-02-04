@@ -1,0 +1,22 @@
+// Remove Focus Boxes
+select:focus {
+    outline: $select-focus;
+}
+
+button:focus {
+    outline: none;
+    background-color: $button-background-focus;
+}
+
+label {
+    font-size: $label-font-size;
+    color: $input-border-color;
+}
+
+@import "input-fields.materialize";
+// @import "radio-buttons.materialize";
+@import "checkboxes.materialize";
+@import "switches.materialize";
+@import "select.materialize";
+// @import "file-input.materialize";
+// @import "range.materialize";
