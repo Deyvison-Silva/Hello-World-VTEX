@@ -1,64 +1,64 @@
 $mobile: 550px;
-$mobile-440: 440px;
+$mobile-460: 460px;
 
 @mixin mobile {
-	@media (max-width: #{$mobile}) {
-		@content;
-	}
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
 }
 
-@mixin mobile-440 {
-	@media (max-width: #{$mobile-440}) {
-		@content;
-	}
+@mixin mobile-460 {
+    @media (max-width: #{$mobile-460}) {
+        @content;
+    }
 }
 
 .header {
-	padding: 0 2rem;
-	display: block;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	background: #fff;
-	box-shadow: 0 1px 0 rgba(0,0,0,.06);
-	height: 60px;
+    padding: 0 2rem;
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+    height: 60px;
 
-	.wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		max-width: 1280px;
-		margin: 0 auto;
-		height: 100%;
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1280px;
+        margin: 0 auto;
+        height: 100%;
 
-		.menu-icon {
-			display: none;
-			fill: #888;
+        .menu-icon {
+            display: none;
+            fill: #888;
 
-			@include mobile-440 {
-				display: block;
-			}
-		}
-	}
+            @include mobile-460 {
+                display: block;
+            }
+        }
+    }
 
-	h1 {
-		width: 100%;
-		max-width: 130px;
-		@include mobile {
-      max-width: 23px;
-      overflow: hidden;
-		}
-		
-		@include mobile-440 {
-			max-width: 130px;
-		}
+    h1 {
+        width: 100%;
+        max-width: 130px;
+        @include mobile {
+            max-width: 23px;
+            overflow: hidden;
+        }
 
-		svg {
-			@include mobile {
-				width: 130px;
-			}
-		}
-	}
+        @include mobile-460 {
+            max-width: 130px;
+        }
+
+        svg {
+            @include mobile {
+                width: 130px;
+            }
+        }
+    }
 }

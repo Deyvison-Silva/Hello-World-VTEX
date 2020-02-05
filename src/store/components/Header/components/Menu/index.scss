@@ -1,83 +1,81 @@
+$mobile-460: 460px;
+$mobile-520: 520px;
 
-$mobile-440: 440px;
-$mobile-490: 490px;
-
-@mixin mobile-440 {
-	@media (max-width: #{$mobile-440}) {
-		@content;
-	}
+@mixin mobile-460 {
+    @media (max-width: #{$mobile-460}) {
+        @content;
+    }
 }
 
-@mixin mobile-490 {
-	@media (max-width: #{$mobile-490}) {
-		@content;
-	}
+@mixin mobile-520 {
+    @media (max-width: #{$mobile-520}) {
+        @content;
+    }
 }
 
 nav.header-menu.menu {
-	float: right;
-	display: flex;
-  max-width: 410px;
-	width: 100%;
-	
-	@include mobile-490 {
-		max-width: 350px;
-		height: 100%;
-	}
+    float: right;
+    display: flex;
+    max-width: 410px;
+    width: 100%;
 
-	@include mobile-440 {
-		width: inherit;
-	}
+    @include mobile-520 {
+        max-width: 350px;
+        height: 100%;
+    }
+
+    @include mobile-460 {
+        width: inherit;
+    }
 }
 
 ul.menu-ul {
-	display: flex;
-	width: 350px;
-	justify-content: space-around;
-	flex-wrap: nowrap;
+    display: flex;
+    width: 350px;
+    justify-content: space-around;
+    flex-wrap: nowrap;
 
-	@include mobile-440 {
-		display: block !important;
-		height: 100vh;
-		position: absolute;
-		background: #fff;
-		top: 0;
-		right: -100%;
-		max-width: 320px;
-		width: 100%;
-		overflow: hidden;
-		overflow-y: auto;
-		z-index: 2;
-		transition: all .7s ease-out;
-		cursor: default;
-		padding-top: 4rem;
-	}
-
+    @include mobile-460 {
+        display: block !important;
+        height: 100vh;
+        position: absolute;
+        background: #fff;
+        top: 0;
+        right: -100%;
+        max-width: 320px;
+        width: 100%;
+        overflow: hidden;
+        overflow-y: auto;
+        z-index: 2;
+        transition: all 0.7s ease-out;
+        cursor: default;
+        padding-top: 4rem;
+    }
 }
 
 li.menu-li a {
-	font-family: Nunito,sans-serif;
-	display: block;
-	padding: 22px 18px;
-	background: #fff;
-	font-size: 16px;
-	font-weight: 700;
-	color: #828282;
-	text-align: center;
-	line-height: 1;
+    font-family: Nunito, sans-serif;
+    display: block;
+    padding: 22px 18px;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    color: #828282;
+    text-align: center;
+    line-height: 1;
 
-	@include mobile-490 {
-		padding: 22px 0px;
-	}
+    @include mobile-520 {
+        padding: 22px 0px;
+    }
 }
 
 li.menu-li a:hover {
-	background: linear-gradient(95.33deg,#f8485e 3.84%,#e11383 97.59%);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent
+    background: linear-gradient(95.33deg, #f8485e 3.84%, #e11383 97.59%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .is-active--menu {
-	right: 0 !important;
+    right: 0 !important;
 }

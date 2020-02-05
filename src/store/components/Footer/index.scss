@@ -1,0 +1,22 @@
+footer {
+    &.footer {
+        display: block;
+        max-width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        background: linear-gradient(95.33deg, #f8485e 3.84%, #e11383 97.59%);
+    }
+
+    .conteiner {
+        margin: 0 auto;
+        max-width: 1280px;
+        padding: 2rem 1rem 5rem;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+adress.adress {
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+}
