@@ -36,6 +36,58 @@ main {
         font-size: 1.5rem;
     }
 
+    .shortcodes.department-navigator .menu-departamento {
+        float: right;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+        h3 {
+            font-family: Nunito, sans-serif;
+            display: block;
+            padding: 22px 18px;
+            background: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            color: #828282;
+            line-height: 1;
+
+            a {
+                color: #828282;
+            }
+
+            &:hover {
+                color: #e11383;
+
+                a {
+                    color: #e11383;
+                }
+            }
+        }
+
+        .brandFilter {
+            min-width: 210px;
+            ul {
+                // display: none;
+                // transform: scaleY(0);
+                height: 0;
+                overflow-y: hidden;
+                max-height: 220px;
+                position: absolute;
+                padding: 0 18px;
+                transition: height 0.5s ease-out;
+                background: #fff;
+                border: 1px solid rgba(0, 0, 0, 0.06);
+                border-top: none;
+            }
+
+            &:hover ul {
+                height: 100%;
+            }
+        }
+    }
+
     fieldset.busca {
         border-radius: 5px;
         padding: 10px 15px;
