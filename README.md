@@ -21,17 +21,14 @@ Pasta onde ficam as configurações do webpack. (Não vamos nos aprofundar muito
 
 Aqui colocamos a mão na massa hehe... a mesma tem três pastas que são **/assets**, **/store** e **/checkout**.
 
--   #### /assets
+- #### /assets
+	- Onde ficam arquivos .css e .js com códigos padrões para o projeto
 
-        - Onde ficam arquivos .css e .js com códigos padrões para o projeto
+- #### /store
+	- Aqui podemos ver a pasta **/components** e nela a estrutura de páginas similar a uma loja online, é aqui que podemos desenvolver nossas soluções da loja de forma modular, ou seja, podemos separar cada pedaço de código para seu devido lugar e assim ter muita facilidade de saber onde cada código ou até mesmo bugs estão, (obrigado webpack).
 
--   #### /store
-
-        - Aqui podemos ver a pasta **/components** e nela a estrutura de páginas similar a uma loja online, é aqui que podemos desenvolver nossas soluções da loja de forma modular, ou seja, podemos separar cada pedaço de código para seu devido lugar e assim ter muita facilidade de saber onde cada código ou até mesmo bugs estão, (obrigado webpack).
-
--   #### /checkout
-
-        - E por fim mas não menos importante a parte de checkout, seguindo o mesmo raciocínio da pasta **/store**, esta também tem uma pasta **/components** e nela a estrutura similar à um carrinho de compras, por aqui desenvolvemos as soluções para a área de carrinho da loja.
+- #### /checkout
+	- E por fim mas não menos importante a parte de checkout, seguindo o mesmo raciocínio da pasta **/store**, esta também tem uma pasta **/components** e nela a estrutura similar à um carrinho de compras, por aqui desenvolvemos as soluções para a área de carrinho da loja.
 
 ## **Iniciando o projeto**
 
