@@ -1,0 +1,43 @@
+body#contact-page {
+    main {
+        max-width: 1280px;
+        margin: 60px auto 0;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-top: 0;
+        border-bottom: 0;
+        padding: 1rem 2rem;
+
+        h1 {
+            color: #e11383;
+            display: inline-block;
+            font-size: 1.5rem;
+            width: 100%;
+            margin-bottom: 4rem;
+        }
+
+        .container {
+            position: initial;
+
+            .contato {
+                ul {
+                    display: flex;
+                    margin-top: 3rem;
+                    flex-direction: column;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        flex: 1;
+                        margin-bottom: 20px;
+
+                        img {
+                            max-width: 20px;
+                            opacity: 0.5;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
