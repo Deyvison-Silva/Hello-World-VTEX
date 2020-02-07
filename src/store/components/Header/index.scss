@@ -24,6 +24,7 @@ $mobile-460: 460px;
     background: #fff;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
     height: 60px;
+    z-index: 1;
 
     .wrapper {
         display: flex;
