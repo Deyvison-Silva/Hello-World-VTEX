@@ -1,3 +1,18 @@
+$mobile-1100: 1100px;
+$mobile-600: 600px;
+
+@mixin mobile-1100 {
+    @media (max-width: #{$mobile-1100}) {
+        @content;
+    }
+}
+
+@mixin mobile-600 {
+    @media (max-width: #{$mobile-600}) {
+        @content;
+    }
+}
+
 main {
     p,
     a,
@@ -36,6 +51,30 @@ main {
         font-size: 1.5rem;
     }
 
+    .caju-shelf {
+        h2 {
+            display: none;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 5rem;
+
+            @include mobile-1100 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mobile-600 {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            li {
+                text-align: center;
+            }
+        }
+    }
+
     .shortcodes.department-navigator .menu-departamento {
         float: right;
         display: flex;
@@ -69,8 +108,6 @@ main {
         .brandFilter {
             min-width: 210px;
             ul {
-                // display: none;
-                // transform: scaleY(0);
                 height: 0;
                 overflow-y: hidden;
                 max-height: 220px;
